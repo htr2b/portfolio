@@ -2,7 +2,7 @@
     --bg: #000;
     --fg: #e5e5e5;
     --accent: #39ff14;
-    --accent-glow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+    --accent-glow: 0 0 8px #37ff1491, 0 0 16px #37ff1400;
     font-family: "Orbitron", Arial, sans-serif;
 }
 
@@ -10,19 +10,20 @@ html,
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
     background: var(--bg);
     color: var(--fg);
     line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
 .site-header {
     text-align: center;
-    padding: 4rem 1rem 3rem;
+    padding: 3.5rem 1rem 2.75rem;
 }
 
 .title {
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(1.75rem, 8vw, 4rem);
     margin: 0;
 }
 
@@ -32,30 +33,37 @@ body {
 }
 
 .subtitle {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    opacity: 0.8;
+    margin-top: .5rem;
+    font-size: 1rem;
+    opacity: .8;
 }
 
 .main-nav {
     margin-top: 2rem;
+    display: block;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
 }
 
 .main-nav a {
-    margin: 0 1rem;
     text-decoration: none;
     color: var(--accent);
     font-weight: 700;
     position: relative;
+    padding: .5rem 1.25rem;
+    border-radius: 4px;
 }
 
 .main-nav a::after {
     content: "";
-    display: block;
-    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
     width: 0;
+    height: 2px;
     background: var(--accent);
-    transition: width 0.3s ease;
+    transition: width .3s;
 }
 
 .main-nav a:hover::after {
@@ -66,24 +74,33 @@ body {
 .section {
     max-width: 900px;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     color: var(--accent);
     text-shadow: var(--accent-glow);
 }
 
+#projects {
+    display: grid;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#projects .section-title {
+    grid-column: 1 / -1;
+}
+
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(57, 255, 20, 0.15);
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(57, 255, 20, .15);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
     backdrop-filter: blur(4px);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform .2s, box-shadow .2s;
 }
 
 .card:hover {
@@ -99,13 +116,13 @@ body {
 .btn {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     border: 1px solid var(--accent);
     border-radius: 4px;
     color: var(--accent);
-    text-decoration: none;
     font-weight: 700;
-    transition: background 0.25s, color 0.25s;
+    text-decoration: none;
+    transition: background .25s, color .25s;
 }
 
 .btn:hover {
@@ -116,7 +133,38 @@ body {
 
 .site-footer {
     text-align: center;
-    padding: 2rem 0 3rem;
-    font-size: 0.875rem;
-    opacity: 0.6;
+    padding: 2.25rem 0 3rem;
+    font-size: .875rem;
+    opacity: .6;
+}
+
+@media (min-width: 640px) {
+
+    .main-nav {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .site-header {
+        padding: 5rem 1rem 4rem;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
 }
