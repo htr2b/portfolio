@@ -5,17 +5,23 @@
     <meta charset="utf-8" />
     <title>Portfolio - Onur Kahan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+    <canvas id="stars"></canvas>
+
     <header class="site-header">
-        <h1 class="title">Hi, I'm <span class="accent">Onur</span></h1>
-        <p class="subtitle">Full-Stack Developer &amp; Creative Coder</p>
-        <p class="subtitle">Ankara Yıldırım Beyazıt University 4th year Computer Engineering student. With knowledge
-            Java, Javascript, Python, HTML, CSS.</p>
+        <h1 class="title">
+            Hi, I'm <span class="accent">Onur</span>
+        </h1>
+        <p class="subtitle">Full-Stack Developer & Creative Coder</p>
+        <p class="subtitle">
+            Ankara Yıldırım Beyazıt University 4th year Computer Engineering student. With knowledge Java, Javascript,
+            Python, HTML, CSS.
+        </p>
 
         <nav class="main-nav">
             <a href="#projects">Projects</a>
@@ -23,50 +29,75 @@
         </nav>
     </header>
 
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
+    <main>
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
 
-        <article class="card">
-            <h3 class="card-title">ClariPic</h3>
-            <p>Ongoing project...</p>
-            <a class="btn" href="https://github.com/htr2b/ClariPic" target="_blank">View Code →</a>
-        </article>
+            <div class="card-grid">
+                <article class="card">
+                    <h3 class="card-title">ClariPic</h3>
+                    <p>Ongoing project...</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://github.com/htr2b/ClariPic" target="_blank" rel="noopener">View Code
+                            →</a>
+                    </div>
+                </article>
 
-        <article class="card">
-            <h3 class="card-title">Student Information System</h3>
-            <p>A website for taking notes and reminders.</p>
-            <a class="btn" href="https://github.com/htr2b/StudentInformationSystem" target="_blank">View Code →</a>
-            <a class="btn" href="https://htr2b.github.io/StudentInformationSystem/" target="_blank">Go to website →</a>
-        </article>
+                <article class="card">
+                    <h3 class="card-title">Student Information System</h3>
+                    <p>A website for taking notes and reminders.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://github.com/htr2b/StudentInformationSystem" target="_blank"
+                            rel="noopener">View Code →</a>
+                        <a class="btn" href="https://htr2b.github.io/StudentInformationSystem/" target="_blank"
+                            rel="noopener">Website →</a>
+                    </div>
+                </article>
 
-        <article class="card">
-            <h3 class="card-title">AYBU Cyber Web Site</h3>
-            <p>This project is a school project and a web site for a studet club for Ankara Yıldırım Beyazıt University
-                AYBU Cyber Student's Club.</p>
-            <a class="btn" href="https://github.com/htr2b/CENG311_Project" target="_blank">View Code →</a>
-            <a class="btn" href="https://htr2b.github.io/CENG311_Project/index.html" target="_blank">Go to website →</a>
-        </article>
+                <article class="card">
+                    <h3 class="card-title">AYBU Cyber Web Site</h3>
+                    <p>School‑project site for AYBU Cyber Student's Club.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://github.com/htr2b/CENG311_Project" target="_blank"
+                            rel="noopener">View Code
+                            →</a>
+                        <a class="btn" href="https://htr2b.github.io/CENG311_Project/index.html" target="_blank"
+                            rel="noopener">Website →</a>
+                    </div>
+                </article>
 
-        <article class="card">
-            <h3 class="card-title">Kahan Law Firm Web Site</h3>
-            <p>Law firm web site.</p>
-            <a class="btn" href="https://github.com/htr2b/kahanLaw" target="_blank">View Code →</a>
-            <a class="btn" href="https://htr2b.github.io/kahanLaw/#" target="_blank">Go to website →</a>
-        </article>
-    </section>
+                <article class="card">
+                    <h3 class="card-title">Kahan Law Firm Web Site</h3>
+                    <p>Law firm web site.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://github.com/htr2b/kahanLaw" target="_blank" rel="noopener">View Code
+                            →</a>
+                        <a class="btn" href="https://htr2b.github.io/kahanLaw/#" target="_blank" rel="noopener">Website
+                            →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <section id="contact" class="section">
-        <h2 class="section-title">Get in Touch</h2>
-        <p>Email: <a class="accent" href="mailto:you@example.com">onurkahan8@gmail.com</a></p>
-        <p>LinkedIn: <a class="accent" href="https://linkedin.com/in/onurkahan"
-                target="_blank">linkedin.com/in/onurkahan</a></p>
-    </section>
+        <section id="contact" class="section">
+            <h2 class="section-title">Get in Touch</h2>
+            <ul class="contact-list">
+                <li>Email:
+                    <a class="accent" href="mailto:onurkahan8@gmail.com">onurkahan8@gmail.com</a>
+                </li>
+                <li>LinkedIn:
+                    <a class="accent" href="https://linkedin.com/in/onurkahan" target="_blank"
+                        rel="noopener">linkedin.com/in/onurkahan</a>
+                </li>
+            </ul>
+        </section>
+    </main>
 
     <footer class="site-footer">
         © 2025 Onur Kahan
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
