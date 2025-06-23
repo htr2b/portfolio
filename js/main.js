@@ -1,4 +1,3 @@
-// js/main.js
 document.querySelectorAll('.main-nav a').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -10,11 +9,6 @@ document.querySelectorAll('.main-nav a').forEach(link => {
 });
 
 const header = document.querySelector('.site-header');
-// Aşağıdaki scroll listener’ı devre dışı bıraktık, glow tamamen kalktı
-// window.addEventListener('scroll', () => {
-//   header.style.boxShadow = window.scrollY > 50 ? '0 0 24px #39ff14' : 'none';
-// });
-
 const navLinks = document.querySelectorAll('.main-nav a');
 const sections = document.querySelectorAll('main section');
 const observerOptions = { rootMargin: '-50% 0px -50% 0px' };
