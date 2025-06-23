@@ -24,7 +24,6 @@ const sectionObserver = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       navLinks.forEach(link =>
         link.classList.toggle(
-          'active',
           link.getAttribute('href') === `#${entry.target.id}`
         )
       );

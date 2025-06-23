@@ -179,7 +179,7 @@ body {
   flex-direction: column;
   gap: 0.75rem;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .site-footer {
