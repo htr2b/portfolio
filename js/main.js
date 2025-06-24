@@ -73,7 +73,6 @@ function renderStars() {
       s.x = Math.random() * canvas.width;
     }
   });
-
   requestAnimationFrame(renderStars);
 }
 
@@ -84,4 +83,4 @@ window.addEventListener('resize', () => {
 
 resizeCanvas();
 createStars();
-requestAnimationFrame(renderStars());
+requestAnimationFrame(renderStars);
