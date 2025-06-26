@@ -1,8 +1,29 @@
+function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+function smoothScrollTo(target, duration) {
+  const start = window.pageYOffset;
+  const targetPosition = target.getBoundingClientRect().top;
+  const startTime = performance.now();
+
+  function scroll() {
+    const currentTime = performance.now();
+    const time = Math.min(1, (currentTime - startTime) / duration);
+    const easedTime = easeInOutQuad(time);
+    window.scrollTo(0, start + targetPosition * easedTime);
+    if (time < 1) {
+      requestAnimationFrame(scroll);
+    }
+  }
+  scroll();
+}
+
 document.querySelectorAll('.main-nav a').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      smoothScrollTo(target, 500)
       e.preventDefault();
     }
   });
