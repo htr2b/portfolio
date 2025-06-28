@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Onur Kahan",
+  "url": "https://www.onurkahan.com",
+  "sameAs": [
+    "https://github.com/htr2b",
+    "https://linkedin.com/in/onurkahan"
+  ],
+  "jobTitle": "Developer"
+}
+</script>
