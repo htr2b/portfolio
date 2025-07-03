@@ -8,6 +8,6 @@
     "https://github.com/htr2b",
     "https://linkedin.com/in/onurkahan"
   ],
-  "jobTitle": "Developer"
+  "jobTitle": "Full-Stack Developer"
 }
 </script>
